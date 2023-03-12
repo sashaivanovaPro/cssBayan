@@ -1,0 +1,57 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/*   FOOTER */
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0px;
+}
+
+.links__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.links__item {
+    text-decoration: none;
+}
+
+.git {
+    height: 25px;
+    margin-top: -5px;
+}
+
+
+.logo {
+    height: 25px;
+    margin: 0;
+    padding: 0;
+}
