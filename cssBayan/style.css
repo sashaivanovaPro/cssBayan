@@ -65,9 +65,8 @@ body {
 
 /*   BODY STYLE START  */
 
-.main,
-.lol__item,
-.cat__picture {
+.lol__menu,
+.lol__item--trigger {
     cursor: pointer;
 }
 
@@ -77,8 +76,8 @@ body {
 }
 
 .lol__slogan {
-    text-decoration: none;
-    color: black;
+    color: teal;
+    font-weight: 700;
     padding: 1.5rem 0;
     font-size: 1.6rem;
     transition: 0.4s;
@@ -105,13 +104,16 @@ body {
     border-bottom: 0.1rem solid gray;
 }
 
-/*.lol__item--trigger {
-    display: block;
-    border-bottom: 0.1rem solid gray;
-} */
-
 .plus-icon {
     height: 2.4rem;
+    border-radius: 50%;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+
+.lol__menu:focus~.lol__item--trigger img {
+    opacity: 1;
 }
 
 .lol__img {
@@ -122,10 +124,16 @@ body {
     margin: 4.0rem 0 2.0rem 0;
 }
 
-.lol__item--input:checked~.lol__item--trigger {}
+.lol__item--input:checked~.lol__item--trigger img {
+    transform: rotate(45deg);
+}
 
 .lol__item--input:checked~.lol__img {
     display: block;
+}
+
+.lol__item--input:checked~.lol__item--trigger div {
+    color: tomato;
 }
 
 /*   BODY STYLE END  */
