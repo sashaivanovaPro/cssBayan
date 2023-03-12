@@ -47,8 +47,28 @@ body {
 
 .wrapper {
     max-width: 1440px;
-    padding: 0 20px;
+    padding: 0 10px;
     margin: 0 auto;
+    text-align: center;
+}
+
+.bayan__headding {
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.lol__menu {
+    margin: 0;
+    padding: 0;
+}
+
+.lol__slogan {
+    text-decoration: none;
+    color: black;
+}
+
+.lol__item {
+    list-style-type: none;
 }
 
 /*   FOOTER */
@@ -59,12 +79,14 @@ body {
     align-items: center;
     margin: 0;
     padding: 20px 0px;
+    font-size: 16px;
 }
 
 .links__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 5px;
 }
 
 .copyright {
@@ -73,10 +95,12 @@ body {
 
 .links__item {
     text-decoration: none;
+    color: black;
 }
 
 .git {
     height: 25px;
+    margin-top: -5px;
 }
 
 
