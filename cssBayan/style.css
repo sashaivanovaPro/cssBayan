@@ -28,6 +28,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 *,
@@ -40,14 +41,15 @@ body {
     margin: 0 auto;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 400;
     color: black;
 }
 
 .wrapper {
-    max-width: 1440px;
-    padding: 0 10px;
+    min-width: 32rem;
+    max-width: 192rem;
+    padding: 0 1.0rem;
     margin: 0 auto;
     text-align: center;
 }
@@ -55,7 +57,7 @@ body {
 /* HEADER STYLE START */
 
 .bayan__headding {
-    margin: 40px 0;
+    margin: 2.0rem 0;
     font-weight: 700;
 }
 
@@ -71,13 +73,13 @@ body {
 .lol__slogan {
     text-decoration: none;
     color: black;
-    padding: 15px 0px;
-    font-size: 16px;
+    padding: 1.5rem 0;
+    font-size: 1.6rem;
 }
 
 .lol__item {
     list-style-type: none;
-    margin-bottom: 20px;
+    margin-bottom: 2.0rem;
 }
 
 .string {
@@ -85,15 +87,15 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid gray;
+    border-bottom: 0.1rem solid gray;
 }
 
 .plus-icon {
-    height: 24px;
+    height: 2.4rem;
 }
 
 .cat__picture {
-    margin: 40px 0px 20px 0px;
+    margin: 4.0rem 0 2.0rem 0;
 }
 
 /*   BODY STYLE END  */
@@ -105,15 +107,15 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding: 20px 0px;
-    font-size: 16px;
+    padding: 2.0rem 0;
+    font-size: 1.6rem;
 }
 
 .links__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 5px;
+    gap: 0.5rem;
 }
 
 .copyright {
@@ -125,14 +127,56 @@ body {
     color: black;
 }
 
+.cat__picture {
+    height: 12.8rem;
+}
+
 .git {
-    height: 25px;
-    margin-top: -5px;
+    height: 2.5rem;
+    margin-top: -0.5rem;
 }
 
 
 .logo {
-    height: 25px;
+    height: 2.5rem;
     margin: 0;
     padding: 0;
+}
+
+/*   FOOTER STYLE START  */
+
+/*  MEDIA  */
+
+@media screen and (min-width:820px) {
+    .lol__slogan {
+        font-size: 3.0rem;
+    }
+
+    .plus-icon {
+        height: 3.0rem;
+    }
+
+    .cat__picture {
+        height: 20rem;
+    }
+
+}
+
+@media screen and (min-width:1440px) {
+
+    .bayan__headding {
+        margin: 4.0rem 0;
+    }
+
+    .lol__slogan {
+        font-size: 3.6rem;
+    }
+
+    .plus-icon {
+        height: 3.6rem;
+    }
+
+    .cat__picture {
+        height: 25.6rem;
+    }
 }
