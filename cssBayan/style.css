@@ -81,14 +81,23 @@ body {
     color: black;
     padding: 1.5rem 0;
     font-size: 1.6rem;
+    transition: 0.4s;
+    cursor: pointer;
 }
 
 .lol__item {
-    list-style-type: none;
+    position: relative;
     margin-bottom: 2.0rem;
 }
 
-.string {
+.lol__item--input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.lol__item--trigger {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -96,19 +105,36 @@ body {
     border-bottom: 0.1rem solid gray;
 }
 
+/*.lol__item--trigger {
+    display: block;
+    border-bottom: 0.1rem solid gray;
+} */
+
 .plus-icon {
     height: 2.4rem;
+}
+
+.lol__img {
+    display: none;
 }
 
 .cat__picture {
     margin: 4.0rem 0 2.0rem 0;
 }
 
+.lol__item--input:checked~.lol__item--trigger {}
+
+.lol__item--input:checked~.lol__img {
+    display: block;
+}
+
 /*   BODY STYLE END  */
 
 /*   FOOTER STYLE START  */
+
+
 .links {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -149,7 +175,9 @@ body {
     padding: 0;
 }
 
-/*   FOOTER STYLE START  */
+
+
+/*   FOOTER STYLE END  */
 
 /*  MEDIA  */
 
