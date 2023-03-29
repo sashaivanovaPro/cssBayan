@@ -24,18 +24,19 @@
     /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-size: 62.5%;
 }
 
+
 *,
 *::after,
 *::before {
     box-sizing: inherit;
 }
+
 
 body {
     margin: 0 auto;
@@ -57,7 +58,8 @@ body {
 /* HEADER STYLE START */
 
 .bayan__headding {
-    margin: 2.0rem 0;
+    font-size: 2rem;
+    margin: 1.5rem 0;
     font-weight: 700;
 }
 
@@ -78,7 +80,7 @@ body {
 .lol__slogan {
     color: teal;
     font-weight: 700;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     font-size: 1.6rem;
     transition: 0.4s;
     cursor: pointer;
@@ -109,32 +111,58 @@ body {
     border-radius: 50%;
     opacity: 1;
     transition: 0.2s;
+    display: none;
 }
 
+/* appearance of close crosses */
+.lol__menu:hover .plus-icon {
+    display: flex;
+    transition: 0.2s ease-in-out;
+}
 
-.lol__menu:focus~.lol__item--trigger img {
-    opacity: 1;
+/* changing golor of mem title while hovering mems area */
+.lol__menu:hover .lol__item--trigger div {
+    color: tomato;
+    transition: 0.2s ease-in-out;
 }
 
 .lol__img {
     display: none;
 }
 
+/* appearance of mem img while hovering mems title row */
+
+.lol__item--trigger:hover+div {
+    display: block;
+    transition: 0.2s ease-in-out;
+}
+
+/* stay displayed mem img while hovering over it - not checked mem */
+.lol__item:hover>div {
+    display: block;
+    transition: 0.2s ease-in-out;
+}
+
 .cat__picture {
     margin: 4.0rem 0 2.0rem 0;
 }
 
+/* rotation of closing crosses */
 .lol__item--input:checked~.lol__item--trigger img {
     transform: rotate(45deg);
+    transition: 0.2s ease-in-out;
 }
 
+/* make visible checked mem */
 .lol__item--input:checked~.lol__img {
     display: block;
 }
 
+/* make tomato color checked mem title */
 .lol__item--input:checked~.lol__item--trigger div {
     color: tomato;
 }
+
 
 /*   BODY STYLE END  */
 
@@ -196,7 +224,12 @@ body {
 }
 
 
-@media screen and (min-width:820px) {
+@media screen and (min-width:819px) {
+
+    .bayan__headding {
+        font-size: 3.2rem;
+    }
+
     .lol__slogan {
         font-size: 3.0rem;
     }
@@ -214,10 +247,11 @@ body {
     }
 }
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1279px) {
 
     .bayan__headding {
         margin: 4.0rem 0;
+        font-size: 4.6rem;
     }
 
     .lol__slogan {
