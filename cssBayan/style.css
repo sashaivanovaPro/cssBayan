@@ -53,6 +53,7 @@ body {
     padding: 0 1.0rem;
     margin: 0 auto;
     text-align: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* HEADER STYLE START */
@@ -67,10 +68,6 @@ body {
 
 /*   BODY STYLE START  */
 
-.lol__menu,
-.lol__item--trigger {
-    cursor: pointer;
-}
 
 .lol__menu {
     margin: 0;
@@ -110,20 +107,20 @@ body {
     height: 2.4rem;
     border-radius: 50%;
     opacity: 1;
-    transition: 0.2s;
+    transition: all 1s;
     display: none;
 }
 
 /* appearance of close crosses */
 .lol__menu:hover .plus-icon {
     display: flex;
-    transition: 0.2s ease-in-out;
+    transition: all 0.3s;
 }
 
 /* changing golor of mem title while hovering mems area */
 .lol__menu:hover .lol__item--trigger div {
     color: tomato;
-    transition: 0.2s ease-in-out;
+    transition: all 0.3s;
 }
 
 .lol__img {
@@ -134,13 +131,12 @@ body {
 
 .lol__item--trigger:hover+div {
     display: block;
-    transition: 0.2s ease-in-out;
+    transition: all 1s;
 }
 
 /* stay displayed mem img while hovering over it - not checked mem */
 .lol__item:hover>div {
     display: block;
-    transition: 0.2s ease-in-out;
 }
 
 .cat__picture {
@@ -150,7 +146,7 @@ body {
 /* rotation of closing crosses */
 .lol__item--input:checked~.lol__item--trigger img {
     transform: rotate(45deg);
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 /* make visible checked mem */
@@ -161,13 +157,12 @@ body {
 /* make tomato color checked mem title */
 .lol__item--input:checked~.lol__item--trigger div {
     color: tomato;
+    transition: 0.3s ease-in-out;
 }
-
 
 /*   BODY STYLE END  */
 
 /*   FOOTER STYLE START  */
-
 
 .links {
     display: none;
@@ -248,6 +243,11 @@ body {
 }
 
 @media screen and (min-width:1279px) {
+
+    .lol__menu,
+    .lol__item--trigger {
+        cursor: pointer;
+    }
 
     .bayan__headding {
         margin: 4.0rem 0;
