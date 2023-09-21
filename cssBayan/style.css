@@ -1,0 +1,272 @@
+/* roboto-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-regular.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-700.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: black;
+}
+
+.wrapper {
+    min-width: 32rem;
+    max-width: 192rem;
+    padding: 0 1.0rem;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* HEADER STYLE START */
+
+.bayan__headding {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    font-weight: 700;
+}
+
+/* HEADER STYLE END */
+
+/*   BODY STYLE START  */
+
+
+.lol__menu {
+    margin: 0;
+    padding: 0;
+}
+
+.lol__slogan {
+    color: teal;
+    font-weight: 700;
+    padding: 1.2rem 0;
+    font-size: 1.6rem;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.lol__item {
+    position: relative;
+    margin-bottom: 2.0rem;
+}
+
+.lol__item--input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.lol__item--trigger {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid gray;
+}
+
+.plus-icon {
+    height: 2.4rem;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 1s;
+    display: none;
+}
+
+/* appearance of close crosses */
+.lol__menu:hover .plus-icon {
+    display: flex;
+    transition: all 0.3s;
+}
+
+/* changing golor of mem title while hovering mems area */
+.lol__menu:hover .lol__item--trigger div {
+    color: tomato;
+    transition: all 0.3s;
+}
+
+.lol__img {
+    display: none;
+}
+
+/* appearance of mem img while hovering mems title row */
+
+.lol__item--trigger:hover+div {
+    display: block;
+    transition: all 1s;
+}
+
+/* stay displayed mem img while hovering over it - not checked mem */
+.lol__item:hover>div {
+    display: block;
+}
+
+.cat__picture {
+    margin: 4.0rem 0 2.0rem 0;
+}
+
+/* rotation of closing crosses */
+.lol__item--input:checked~.lol__item--trigger img {
+    transform: rotate(45deg);
+    transition: 0.3s ease-in-out;
+}
+
+/* make visible checked mem */
+.lol__item--input:checked~.lol__img {
+    display: block;
+}
+
+/* make tomato color checked mem title */
+.lol__item--input:checked~.lol__item--trigger div {
+    color: tomato;
+    transition: 0.3s ease-in-out;
+}
+
+/*   BODY STYLE END  */
+
+/*   FOOTER STYLE START  */
+
+.links {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 2.0rem 0;
+    font-size: 1.6rem;
+}
+
+.links__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.links__item {
+    text-decoration: none;
+    color: black;
+}
+
+.cat__picture {
+    height: 12.8rem;
+}
+
+.git {
+    height: 2.5rem;
+    margin-top: -0.5rem;
+}
+
+
+.logo {
+    height: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*   FOOTER STYLE END  */
+
+/*  MEDIA  */
+
+@media screen and (min-width:500px) {
+    .wrapper {
+        padding: 0 5rem;
+    }
+}
+
+
+@media screen and (min-width:819px) {
+
+    .bayan__headding {
+        font-size: 3.2rem;
+    }
+
+    .lol__slogan {
+        font-size: 3.0rem;
+    }
+
+    .plus-icon {
+        height: 3.0rem;
+    }
+
+    .cat__picture {
+        height: 20rem;
+    }
+
+    .wrapper {
+        padding: 0 10rem;
+    }
+}
+
+@media screen and (min-width:1279px) {
+
+    .lol__menu,
+    .lol__item--trigger {
+        cursor: pointer;
+    }
+
+    .bayan__headding {
+        margin: 4.0rem 0;
+        font-size: 4.6rem;
+    }
+
+    .lol__slogan {
+        font-size: 3.6rem;
+    }
+
+    .plus-icon {
+        height: 3.6rem;
+    }
+
+    .cat__picture {
+        height: 25.6rem;
+    }
+
+    .wrapper {
+        padding: 0 20rem;
+    }
+}
